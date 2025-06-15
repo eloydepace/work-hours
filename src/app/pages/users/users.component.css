@@ -1,0 +1,42 @@
+.panel{
+    height: calc(100vh - 85px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--primary-color)
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+    padding-top: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary-color);
+    height: 80%;
+    width: 1060px;
+    border-radius: 25px;
+    border: 1px solid var(--border);
+}
+
+p-table{
+    color: var(--text-primary);
+}
+
+thead{
+    background-color: var(--text-color);
+}
+tr{
+    height: 40px;
+}

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<main>
+    <div class="panel">
+        <div class="welcome">
+            <h2>¡Te damos la bienvenida, {{userData.name}} {{userData.lastName}}!</h2>
+        </div>
+        <div class="stats">
+            <div class="current-time">{{actualHour}}</div>
+            <div class="working-time">
+                <div class="working-time-text">
+                    <p>Horas trabajadas:</p>
+                </div>
+                <div class="worked-hours">
+                    <p>-- Horas</p>
+                </div>
+                <div class="worked-minutes">
+                    <p>-- Minutos</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-actions">
+            <div class="lunch">
+                <div class="lunch-icon"><i class="fas fa-utensils"></i>
+                </div>
+                <div class="lunch-text"><p>Descanso</p></div>
+            </div>
+            <div class="clock-in-out">
+                <div class="clock-icon"><i class="fas fa-play"></i></div>
+                <div class="clock-text"><p>Iniciar Jornada</p></div>
+            </div>
+            <div class="hours">
+                <div class="hours-icon"><i class="fas fa-calendar-check"></i></div>
+                <div class="hours-text"><p>Registro Horario</p></div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-nav-bar></app-nav-bar>

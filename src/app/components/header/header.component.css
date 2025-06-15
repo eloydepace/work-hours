@@ -1,0 +1,77 @@
+header{
+    height: 85px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: sticky;
+    border-bottom: 1px solid var(--border);
+
+    .header-wrapper{
+        margin: auto;
+        max-width: 1060px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        width: 150px;
+    }
+
+    img{
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+    }
+    h2{
+        color: var(--text-primary);
+    }
+
+    .header-icons{
+        height: 80px;
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    i{
+        font-size: 25px;
+    }
+
+    button{
+        height: 40px;
+        width: 40px;
+        border-radius: 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #profile{
+        border: none;
+        background-color: transparent;
+        color: var(--text-primary);
+    }
+    #profile:hover{
+        background-color: var(--text-primary);
+        color: var(--secondary-color);
+        transition: .5s;
+    }
+    #profile:not(:hover){
+        transition: .5s;
+    }
+    #log-out{
+        border: none;
+        color: red;
+        background-color: transparent;
+    }
+    #log-out:hover{
+        background-color: red;
+        transition: .5s;
+        color: var(--text-primary);
+    }
+    #log-out:not(:hover){
+        transition: .5s;
+    }
+}

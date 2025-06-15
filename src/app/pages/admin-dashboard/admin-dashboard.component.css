@@ -1,0 +1,121 @@
+.panel{
+    height: calc(100vh - 85px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--primary-color)
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+    padding-top: 30px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary-color);
+    height: 150px;
+    width: 1060px;
+    border-radius: 25px;
+    border: 1px solid var(--border);
+    
+}
+.current-time{
+    font-size: 60px;
+    font-family: Clock;
+    color: var(--text-primary);
+}
+.working-time{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-size: 20px;
+    color: var(--text-primary);
+
+}
+.wrapper-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: 400px;
+    width: 80%;
+    border-radius: 25px;
+}
+.lunch, .clock-in-out, .hours{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+.clock-in-out{
+    background-color: #10b981;
+}
+.lunch{
+    background-color: #f59e0b;
+}
+.hours{
+    background-color: #8b5cf6;
+}
+.clock-in-out:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    background-color: #059669;
+    .clock-icon{
+        transform: scale(1.1);
+        transition: .5s;
+    }
+}
+.lunch:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    background-color: #d97706;
+    .lunch-icon{
+        transform: scale(1.1);
+        transition: .5s;
+    }
+}
+.hours:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    background-color: #7c3aed;
+    .hours-icon{
+        transform: scale(1.1);
+        transition: .5s;
+    }
+}
+.clock-in-out:not(:hover), .lunch:not(:hover), .hours:not(:hover){
+    transition: .5s;
+    .clock-icon{
+        transition: .5s;
+    }
+    .lunch-icon{
+        transition: .5s;
+    }
+    .hours-icon{
+        transition: .5s;
+    }
+}
+.clock-icon, .hours-icon, .lunch-icon{
+    font-size: 60px;
+}
+.clock-text, .lunch-text, .hours-text{
+    font-size: 30px;
+}

@@ -1,0 +1,41 @@
+<app-header></app-header>
+<main>
+    <div class="panel">
+        <div class="welcome">
+            <h2>Lista de usuarios:</h2>
+        </div>
+        <div class="card">
+            <p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template #header>
+                    <tr>
+                        <th pSortableColumn="name" style="width:25%">
+                            Nombre <p-sortIcon field="name" />
+                        </th>
+                        <th pSortableColumn="dni" style="width:20%">
+                            DNI <p-sortIcon field="dni" />
+                        </th>
+                        <th pSortableColumn="email" style="width:30%">
+                            Correo <p-sortIcon field="email" />
+                        </th>
+                        <th pSortableColumn="admin" style="width:15%">
+                            Rol <p-sortIcon field="admin" />
+                        </th>
+                        <th pSortableColumn="status" style="width:10%">
+                            Estatus <p-sortIcon field="status" />
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template #body let-user>
+                    <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.dni }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.admin }}</td>
+                        <td>{{user.status}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</main>
+<app-nav-bar></app-nav-bar>

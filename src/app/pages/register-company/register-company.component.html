@@ -1,0 +1,45 @@
+<main>
+
+    <div class="form-container">
+        <h2 class="register-title">Información de la empresa:</h2>
+        <div class="form">
+            <form action="">
+                <div class="label-input">
+                    <label for="form-company-name">Nombre de la empresa:</label>
+                    <input type="text" id="form-company-name" name="companyName" required [(ngModel)]="companyName" >
+                </div>
+                <div class="label-input">
+                    <label for="form-company-cif">CIF:</label>
+                    <input type="text" id="form-company-cif" maxlength="9" minlength="9" name="cif" required [(ngModel)]="cif">
+                </div>
+                <div class="label-input">
+                    <label for="form-company-logo">Logo: (opcional)</label>
+                    <input type="text" id="form-company-logo"  name="logo" [(ngModel)]="logo">
+                </div>
+                <h2 class="register-title">Información del administrador:</h2>
+                <div class="label-input">
+                    <label for="form-name">Nombre:</label>
+                    <input type="text" id="form-name" name="name" required [(ngModel)]="name" >
+                </div>
+                <div class="label-input">
+                    <label for="form-surname">Primer Apellido:</label>
+                    <input type="text" id="form-surname" name="lastName" required [(ngModel)]="lastName">
+                </div>
+                <div class="label-input">
+                    <label for="form-id">DNI / NIE:</label>
+                    <input type="text" id="form-id" maxlength="9" minlength="9" name="dni" required [(ngModel)]="dni">
+                </div>
+                <div class="label-input">
+                    <label for="form-password">Contraseña:</label>
+                    <input type="password" id="form-password" maxlength="4" minlength="4" name="password" required [(ngModel)]="password">
+                </div>
+                <div class="label-input">
+                    <label for="form-email">Correo Electrónico:</label>
+                    <input type="email" name="" id="form-email" name="email" required [(ngModel)]="email">
+                </div>
+                <button id="register-button" (click)="registerCompany()" type="submit" >Registrar</button>
+            </form>
+        </div>
+    </div>
+
+</main>

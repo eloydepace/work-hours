@@ -1,0 +1,23 @@
+<main>
+    <div class="logo">
+       <img class="work-hours-logo" src="/assets/images/work-hours-complete-logo.png" alt="">
+    </div>
+    <div class="login-card">
+        <div class="login">
+            <div class="start"><h2>Iniciar sesión:</h2></div>
+            <div class="form-input">
+                <form class="form">
+                    <div class="username">
+                        <label for="username">Usuario:</label>
+                        <input type="text" maxlength="9" placeholder="01234567X" id="username" name="dni" [(ngModel)]="dni" required>
+                    </div>
+                    <div class="password">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" maxlength="4" placeholder="····" inputmode="numeric" id="password" name="password" [(ngModel)]="password" required>
+                    </div>
+                    <button type="submit" (click)="logIn()" >Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

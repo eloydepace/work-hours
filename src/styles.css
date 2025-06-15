@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+@font-face {
+    font-family: Poppins;
+    src: url("../src/assets/fonts/Poppins-Regular.ttf");
+
+}
+@font-face {
+    font-family: Clock;
+    src: url(../src/assets/fonts/alarm-clock.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    overflow: hidden;
+}
+
+body{
+    background-color: #111827;
+    
+}
+
+:root{
+    --primary-color: #111827 ;
+    --secondary-color: #1f2937 ;
+    --text-primary: #f9fafb;
+    --border: #4b5563;
+    --logo-green: #10C610;
+
+}
+
+.toast-container .ngx-toastr{
+    box-shadow: none;
+    border-radius: 15px;
+}
