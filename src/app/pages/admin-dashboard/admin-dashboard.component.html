@@ -11,10 +11,7 @@
                     <p>Horas trabajadas:</p>
                 </div>
                 <div class="worked-hours">
-                    <p>-- Horas</p>
-                </div>
-                <div class="worked-minutes">
-                    <p>-- Minutos</p>
+                    <p>{{workTime}}</p>
                 </div>
             </div>
         </div>
@@ -24,9 +21,13 @@
                 </div>
                 <div class="lunch-text"><p>Descanso</p></div>
             </div>
-            <div class="clock-in-out">
+            <div class="clock-in-out" *ngIf="!journeyStarted" (click)="startJourney()">
                 <div class="clock-icon"><i class="fas fa-play"></i></div>
                 <div class="clock-text"><p>Iniciar Jornada</p></div>
+            </div>
+            <div class="clock-in-out out" *ngIf="journeyStarted" (click)="endJourney()">
+                <div class="clock-icon"><i class="fas fa-stop"></i></div>
+                <div class="clock-text"><p>Terminar Jornada</p></div>
             </div>
             <div class="hours">
                 <div class="hours-icon"><i class="fas fa-calendar-check"></i></div>

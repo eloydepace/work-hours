@@ -113,6 +113,10 @@
         transition: .5s;
     }
 }
+
+.clock-in-out.out{
+    background-color: red !important;
+}
 .clock-icon, .hours-icon, .lunch-icon{
     font-size: 60px;
 }

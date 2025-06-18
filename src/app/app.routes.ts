@@ -8,12 +8,15 @@ import { authGuard } from './services/auth.guard';
 import { employeeGuard } from './services/employee.guard';
 import { UsersComponent } from './pages/users/users.component';
 import { RegisterCompanyComponent } from './pages/register-company/register-company.component';
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 
 export const routes: Routes = [
     {path: 'login', component: LoginComponent}, 
     {path: 'register', component: RegisterComponent},
     {path: 'admin-dashboard', component: AdminDashboardComponent, canActivate: [adminGuard]},
     {path: 'user-panel', component: UserPanelComponent, canActivate: [employeeGuard]},
-    {path: 'users', component: UsersComponent},
+    {path: 'users', component: UsersComponent, canActivate: [adminGuard]},
     {path: 'register-company', component: RegisterCompanyComponent},
+    {path: 'user-detail/:id', component: UserDetailComponent, canActivate: [adminGuard]},
+
 ];

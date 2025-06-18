@@ -2,6 +2,7 @@
 <main>
     <div class="panel">
         <div class="welcome">
+            <button (click)="openModal()">Registrar empleado</button>
             <h2>Lista de usuarios:</h2>
         </div>
         <div class="card">
@@ -21,21 +22,58 @@
                             Rol <p-sortIcon field="admin" />
                         </th>
                         <th pSortableColumn="status" style="width:10%">
-                            Estatus <p-sortIcon field="status" />
+                            Registro <p-sortIcon field="status" />
                         </th>
                     </tr>
                 </ng-template>
                 <ng-template #body let-user>
                     <tr>
-                        <td>{{ user.name }}</td>
+                        <td>{{ user.name }} {{user.lastName}}</td>
                         <td>{{ user.dni }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.admin }}</td>
-                        <td>{{user.status}}</td>
+                        <td><button (click)="goToDetail(user.id)">Registro</button></td>
                     </tr>
                 </ng-template>
             </p-table>
         </div>
     </div>
+<p-dialog [modal]="true" [(visible)]="visible">
+    <div class="form-container">
+        <h1 class="register-title">Registrar empleado</h1>
+        <div class="form">
+            <form action="">
+                <div class="label-input">
+                    <label for="form-name">Nombre:</label>
+                    <input type="text" id="form-name" name="name" required [(ngModel)]="name" >
+                </div>
+                <div class="label-input">
+                    <label for="form-surname">Primer Apellido:</label>
+                    <input type="text" id="form-surname" name="lastName" required [(ngModel)]="lastName">
+                </div>
+                <div class="label-input">
+                    <label for="form-id">DNI / NIE:</label>
+                    <input type="text" id="form-id" maxlength="9" minlength="9" name="dni" required [(ngModel)]="dni">
+                </div>
+                <div class="label-input">
+                    <label for="form-password">Contraseña:</label>
+                    <input type="password" id="form-password" maxlength="4" minlength="4" name="password" required [(ngModel)]="password">
+                </div>
+                <div class="label-input">
+                    <label for="form-email">Correo Electrónico:</label>
+                    <input type="email" name="" id="form-email" name="email" required [(ngModel)]="email">
+                </div>
+                <div class="radio-group">
+                    <label for="">¿Será Administrador?</label>
+                    <label class="radio-label" for="admin-yes">Sí</label>
+                    <input type="radio" id="admin-yes" name="admin" value="yes" [(ngModel)]="admin">
+                    <label class="radio-label" for="admin-no">No</label>
+                    <input type="radio" id="admin-no" name="admin" value="no" checked [(ngModel)]="admin">
+                </div>
+                <button id="register-button" (click)="registerUser()" type="submit" >Registrar</button>
+            </form>
+        </div>
+    </div>
+</p-dialog>
 </main>
 <app-nav-bar></app-nav-bar>

@@ -9,12 +9,24 @@ import { Company, CompanyCreate } from '../../interfaces/company';
 
 export class CompanyService {
 
-  private apiUrl: string = "http://localhost:3016/api/company";
+  private apiUrl: string = "http://localhost:3000";
 
   constructor(private http: HttpClient) {}
 
   signIn(company: CompanyCreate): Observable<any>{
-    return this.http.post(`${this.apiUrl}/registerCompany/`, company)
+    return this.http.post(`${this.apiUrl}/registerCompany/`, company);
+  }
+
+  getUsers(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/getUsers`);
+  }
+
+  addUser(user : any){
+    return this.http.post(`${this.apiUrl}/addUser`, user);
+  }
+
+  getChecksByUser(userId : any){
+    return this.http.post(`${this.apiUrl}/getChecksByUser`, userId);
   }
 
 }
